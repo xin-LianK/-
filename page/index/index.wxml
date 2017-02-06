@@ -1,0 +1,96 @@
+<scroll-view class="scroll-view" scroll-y="true" lower-threshold="60" bindscrolltolower="refresh">
+
+    <view class="nav">
+        <view class="nav-left">
+            <view class="hidden-nav icon icon-lisimoshicaidandaohang" bindtap="showSide"></view>
+            <view class="wenzi">首页</view>
+        </view>
+        
+        <view class="nav-right">
+            <view class="navR1 icon icon-lingdang"></view>
+            <view class="navR2 icon icon-more1170511easyiconnet"></view>
+        </view>
+    </view>
+
+  <loading hidden="{{changeloading}}">
+  加载中....
+  </loading>
+    <toast hidden="{{tipsHidden}}" duration="1000" bindchange="hide">
+  刷新成功
+  </toast>
+  <action-sheet hidden="{{actionHidden}}" bindchange="hideAction">
+  <block wx:for="{{['阅读','分享']}}">
+    <action-sheet-item  bindtap="action" data-name="{{item}}">{{item}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<modal title="标题" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+  分享内容
+</modal>
+ <toast class="fenxiang" hidden="{{fxHidden}}" duration="1000" bindchange="fxhide">
+分享成功
+  </toast>
+
+<swiper indicator-dots="true"  autoplay="true" interval="2000"  class="swiper">
+<swiper-item wx:for="{{imgs}}" data-id="{{item.id}}" class="swiper-item" style="background-image:url({{item.image}});background-size:cover" bindtap="show" >
+<view class="item">{{item.title}}</view>
+</swiper-item>
+</swiper>
+ 
+<view class="xinwen">
+<view class="jinri">今日新闻</view>
+</view>
+<block wx:for="{{news}}">
+<view class="items" bindtap="aaaa" data-id="{{item.id}}">
+<view class="items-title">{{item.title}}</view>
+<view wx:if="{{showImg}}"class="items-image" style="background-image:url({{item.images[0]}});background-size:cover"></view>
+</view>
+</block>
+
+<!--<view class="side {{showside?'showshow':''}}"></view>
+<view class="show-side" bindtap="showSide"></view>-->
+
+<!--<view class=" side" animation="{{chu}}"></view>-->
+
+<view class="side {{showside?'showshow':''}}">
+
+
+
+<view class="box">
+<view class="denglu">
+  <view class="dl">
+    <view class="yuan"></view>
+    <view class="qdl">请登录</view>
+  </view>
+  <view class="xia">
+  <view class="sc"> 
+  <view class="xinxin icon icon-xingxing"></view>
+  <view class="wdsc">我的收藏</view>
+  </view>
+  <view class="xz">
+   <view class="xiazai icon icon-xiazai"></view>
+  <view class="lxxz">离线下载</view>
+  </view>
+  </view>
+</view>
+<view class="shouye ">
+<view class="fangzi icon icon-home1"></view>
+<view class="fangzizi">首页</view>
+</view>
+
+    <scroll-view  wx:for="{{names}}" class="namelist" scroll-y="true" bindtap="toabout" data-id="{{item.id}}">
+      <view class="itemname">{{item.name}}</view>
+      <view class="jiahao icon icon-jiahao1"></view>
+    </scroll-view>
+</view>
+
+</view>
+
+
+<view animation="{{dianji}}" class="show-side" bindtap="showSide" style="background-image:url({{userPic}});background-size:contain"></view>
+
+</scroll-view>
+
+
+

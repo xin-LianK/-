@@ -1,0 +1,8 @@
+<view class="top"style="background-Image:url({{bigimage}});background-size:cover">
+<view class="zi">{{description}}</view>
+</view>
+<view  wx:for="{{titles}}"class="titles" bindtap="dianji" data-id="{{item.id}}">
+<view class="left">{{item.title}}</view>
+<view   class="right" style="background-Image:url({{item.images[0]}});background-size:cover"></view>
+
+</view>

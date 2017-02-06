@@ -1,0 +1,15 @@
+App({
+    onLaunch:function(){
+        console.log('launch');
+    },
+    onShow:function(){
+        console.log('show');
+    },
+    onHide:function(){
+        console.log('hide');
+    },
+    user:{
+        name:'aaaa',
+        age:'50'
+    }
+})

@@ -1,0 +1,12 @@
+<!--<view>
+<view class="title">{{title}}</view>
+<view>ssssssssssss</view>
+<view class="body">{{body}}</view>
+</view> -->
+<view class="content" bindtouchstart="start" bindtouchmove="move">
+    <view class="title">{{title}}</view>
+    <view>
+        <image src="{{image}}"></image>
+    </view>
+    <view>{{body}}</view>
+</view>

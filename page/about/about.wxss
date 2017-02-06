@@ -1,0 +1,45 @@
+.top{
+    width:100%;
+    height:400rpx;
+position:relative;
+}
+.zi{
+    width:80%;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:50rpx;
+    margin:auto;
+    color:#fff;
+    
+}
+.titles{
+     border:1px solid #ddd;
+    box-sizing:border-box;
+    margin-left:8px;
+    margin-right:8px;
+    margin-top:8px;    
+    height:200rpx;
+    box-shadow:0px 0px 3px RGBA(0,0,0,0.4);
+    background:#fff;
+    position:relative;
+}
+.left{
+      width:60%;
+    height:100%;
+    float:left;
+    /*margin-left:20px;
+   padding-top:3px;*/
+   box-sizing:border-box;
+   padding:8px;
+   padding-left:14px;
+   padding-right:0;
+
+}
+.right{
+    width:183rpx;
+    height:183rpx;
+    position:absolute;
+    right:20rpx;
+    bottom:2rpx;
+}
